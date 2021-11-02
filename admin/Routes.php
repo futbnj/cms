@@ -5,6 +5,6 @@
  */
 
 $this->router->add('login', '/admin/login/', 'LoginController:form');
+$this->router->add('auth-admin', '/admin/auth/', 'LoginController:authAdmin', 'POST');
 $this->router->add('dashboard', '/admin/', 'DashboardController:index');
-//$this->router->add('news', '/news', 'HomeController:news');
-//$this->router->add('news_single', '/news/(id:int)', 'HomeController:news');
+$this->router->add('logout', '/admin/logout/', 'AdminController:logout');

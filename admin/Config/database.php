@@ -2,6 +2,9 @@
 
 return [
     'host' => 'localhost',
-    'username' => 'mysql'
+    'db_name' => 'cms-test',
+    'username' => 'mysql',
+    'password' => '',
+    'charset' => 'utf8'
 ];
 
