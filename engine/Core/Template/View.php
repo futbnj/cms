@@ -5,6 +5,7 @@ namespace Engine\Core\Template;
 use Engine\Core\Template\Theme;
 class View
 {
+    public $di;
     /**
      * @var \Engine\Core\Template\Theme
      */
@@ -15,6 +16,7 @@ class View
      */
     public function __construct()
     {
+        $this->di = $di;
         $this->theme = new Theme();
     }
 

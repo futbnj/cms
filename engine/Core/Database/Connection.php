@@ -2,6 +2,7 @@
 
 namespace Engine\Core\Database;
 
+use mysql_xdevapi\Statement;
 use \PDO;
 use Engine\Core\Config\Config;
 
