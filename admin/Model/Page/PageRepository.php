@@ -16,6 +16,13 @@ class PageRepository extends Model
         return $this->db->query($sql);
     }
 
+    public function getPageData($id)
+    {
+        $page = new Page($id);
+
+        return $page->findOne();
+    }
+
     /**
      * @param $params
      * @return mixed
@@ -28,6 +35,16 @@ class PageRepository extends Model
         $pageId = $page->save();
 
         return $pageId;
+    }
+
+    public function updatePage($params)
+    {
+        if ( isset($params['page_id']) ) {
+            $page = new Page($params['page_id']);
+            $page->setTitle($params['title']);
+            $page->setContent($params['content']);
+            $page->save();
+        }
     }
 
 }
