@@ -18,7 +18,7 @@ class Provider extends AbstractProvider
      */
     public function init()
     {
-        $load = new Load();
+        $load = new Load($this->di);
 
         $this->di->set($this->serviceName, $load);
     }

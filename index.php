@@ -1,4 +1,4 @@
 <?php
 const ROOT_DIR = __DIR__;
 const ENV = 'Cms';
-require_once 'engine/bootstrap.php';
+require_once 'engine/Bootstrap.php';

@@ -1,4 +1,4 @@
-var page = {
+var post = {
     ajaxMethod: 'POST',
 
     add: function() {
@@ -8,7 +8,7 @@ var page = {
         formData.append('content', $('.redactor-editor').html());
 
         $.ajax({
-            url: '/admin/page/add/',
+            url: '/admin/post/add/',
             type: this.ajaxMethod,
             data: formData,
             cache: false,
@@ -19,7 +19,7 @@ var page = {
             },
             success: function(result){
                 console.log(result);
-                window.location = '/admin/pages/edit/' + result;
+                window.location = '/admin/posts/edit/' + result;
             }
         });
     },
@@ -27,12 +27,12 @@ var page = {
     update: function () {
         var formData = new FormData();
 
-        formData.append('page_id', $('#formPageId').val());
+        formData.append('post_id', $('#formPostId').val());
         formData.append('title', $('#formTitle').val());
         formData.append('content', $('.redactor-editor').html());
 
         $.ajax({
-            url: '/admin/page/update/',
+            url: '/admin/post/update/',
             type: this.ajaxMethod,
             data: formData,
             cache: false,
@@ -49,4 +49,4 @@ var page = {
     }
 };
 
-console.log(page);
+console.log(post);

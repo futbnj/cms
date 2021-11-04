@@ -34,8 +34,7 @@ class Cms
 
             $routerDispatch = $this->router->dispatch($obj->getMethod(), $obj->getPathUrl());
 
-            if ($routerDispatch == null)
-            {
+            if ($routerDispatch == null){
                 $routerDispatch = new DispatchedRoute('ErrorController:page404');
             }
 
@@ -50,9 +49,5 @@ class Cms
             echo $e->getMessage();
             exit;
         }
-//        print_r($class);
-//        echo '<br>';
-//        print_r($action);
-//        print Common::getPathUrl();
     }
 }

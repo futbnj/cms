@@ -34,5 +34,32 @@ abstract class Controller
         $this->config   = $this->di->get('config');
         $this->request  = $this->di->get('request');
         $this->load     = $this->di->get('load');
+
+        $this->initVars();
+    }
+
+    /**
+     * @param $key
+     * @return bool|null
+     */
+    public function __get($key)
+    {
+        return $this->di->get($key);
+    }
+
+    /**
+     * @return $this
+     */
+    public function initVars()
+    {
+        $vars = array_keys(get_object_vars($this));
+
+        foreach ($vars as $var){
+            if ($this->di->has($var)) {
+                $this->{$var} = $this->di->get($var);
+            }
+        }
+
+        return $this;
     }
 }
