@@ -57,4 +57,9 @@ class Connection
 
         return $result;
     }
+
+    public function lastInsertId()
+    {
+        return $this->link->lastInsertId();
+    }
 }

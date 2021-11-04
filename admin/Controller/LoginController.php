@@ -71,5 +71,7 @@ class LoginController extends Controller
             }
         }
 
+        echo 'incorrect email or password';
+
     }
 }
