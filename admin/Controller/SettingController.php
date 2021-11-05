@@ -6,12 +6,20 @@ class SettingController extends AdminController
 {
     public function general()
     {
-        $this->load->model('setting');
+        $this->load->model('Setting');
 
         $this->data['settings'] = $this->model->setting->getSettings();
+//        $this->data['language'] = languages();
 
         $this->view->render('setting/general', $this->data);
     }
 
+    public function updateSetting()
+    {
+        $this->load->model('Setting');
 
+        $params = $this->request->post;
+
+        $this->model->setting->update($params);
+    }
 }

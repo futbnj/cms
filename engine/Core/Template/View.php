@@ -2,22 +2,41 @@
 
 namespace Engine\Core\Template;
 
-use Engine\Core\Template\Theme;
+use Admin\Model\Setting\SettingRepository;
+use Engine\DI\DI;
+
 class View
 {
+    /**
+     * @var
+     */
     public $di;
+
     /**
      * @var \Engine\Core\Template\Theme
      */
     protected $theme;
 
     /**
-     * View constructor.
+     * @var Setting
      */
-    public function __construct()
+    protected $setting;
+
+    /**
+     * @var Menu
+     */
+    protected $menu;
+
+    /**
+     * View constructor.
+     * @param DI $di
+     */
+    public function __construct(DI $di)
     {
         $this->di = $di;
         $this->theme = new Theme();
+        $this->setting = new Setting($di);
+        $this->menu = new Menu($di);
     }
 
     /**
@@ -26,6 +45,12 @@ class View
      */
     public function render($template, $vars = [])
     {
+        $functions = \Theme::getThemePath() . '/functions.php';
+
+        if (file_exists($functions)) {
+            include_once $functions;
+        }
+
         $templatePath = $this->getTemplatePath($template, ENV);
 
         if (!is_file($templatePath))
@@ -64,7 +89,12 @@ class View
             return ROOT_DIR . '/content/themes/default/' . $template . '.php';
         }
 
-        return ROOT_DIR . '/View/' . $template . '.php';
+        return path('view') . '/' . $template . '.php';
+    }
+
+    private function getThemePath()
+    {
+        return ROOT_DIR . '/content/themes/default';
     }
 
 }

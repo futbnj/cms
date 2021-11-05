@@ -9,7 +9,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <form>
+                    <form id="settingForm">
                         <?php foreach ($settings as $setting): ?>
                             <div class="form-group row">
                                 <label for="formNameSite" class="col-2 col-form-label">
@@ -30,7 +30,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary" onclick="setting.update(); return false;">Save changes</button>
                     </form>
                 </div>
             </div>

@@ -5,7 +5,7 @@ namespace Engine\Helper;
 class Common
 {
 
-    function isPost()
+    static function isPost()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
@@ -18,7 +18,7 @@ class Common
     /**
      * @return mixed
      */
-    function getMethod()
+    static function getMethod()
     {
         return $_SERVER['REQUEST_METHOD'];
     }
@@ -26,7 +26,7 @@ class Common
     /**
      * @return false|mixed|string
      */
-    function getPathUrl()
+    static function getPathUrl()
     {
         $pathUrl = $_SERVER['REQUEST_URI'];
 
