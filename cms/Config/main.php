@@ -1,9 +1,8 @@
 <?php
 
 return [
-    'base_url' => 'http://cms/',
+    'baseUrl' => 'http://cms/',
     'defaultLang' => 'english',
     'defaultTimezone' => 'America/Chicago',
     'defaultTheme' => 'default',
-    'baseUrl' => ''
 ];

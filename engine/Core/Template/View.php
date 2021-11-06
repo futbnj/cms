@@ -84,17 +84,18 @@ class View
     private function getTemplatePath($template, $env = null)
     {
 
-        if ($env == 'Cms')
+        if ($env === 'Cms')
         {
-            return ROOT_DIR . '/content/themes/default/' . $template . '.php';
+            $theme =  \Setting::get('active_theme');
+            return ROOT_DIR . '/content/themes/' . $theme . '/' . $template . '.php';
         }
 
         return path('view') . '/' . $template . '.php';
     }
 
-    private function getThemePath()
-    {
-        return ROOT_DIR . '/content/themes/default';
-    }
+//    private function getThemePath()
+//    {
+//        return ROOT_DIR . '/content/themes/default';
+//    }
 
 }

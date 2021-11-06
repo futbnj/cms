@@ -61,4 +61,9 @@ class Customize
         return $this->getConfig()->get('dashboardMenu');
     }
 
+    public function getAdminSettingItems(): array
+    {
+        $result[] = $this->getConfig()->get('settingMenu');
+        return $result;
+    }
 }

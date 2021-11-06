@@ -37,4 +37,22 @@ class Common
 
         return $pathUrl;
     }
+
+    function searchMatchString($string, $find)
+    {
+        if (strripos($string, $find) !== false){
+            return true;
+        }
+
+        return false;
+    }
+
+    static function isLinkActive($key)
+    {
+        if (self::searchMatchString($_SERVER['REQUEST_URI'], $key)) {
+            return true;
+        }
+
+        return false;
+    }
 }
