@@ -4,7 +4,7 @@
 namespace Engine\Core\Template;
 
 use Engine\DI\DI;
-use Cms\Model\Menu\MenuRepository;
+use Cms\Model\MenuItem\MenuItemRepository;
 
 class Menu
 {
@@ -14,14 +14,14 @@ class Menu
     protected static $di;
 
     /**
-     * @var MenuRepository
+     * @var MenuItemRepository
      */
-    protected static $menuRepository;
+    protected static $menuItemRepository;
 
     public function __construct($di)
     {
         self::$di = $di;
-        self::$menuRepository = new MenuRepository(self::$di);
+        self::$menuItemRepository = new MenuItemRepository(self::$di);
     }
 
     public static function show()
@@ -31,6 +31,6 @@ class Menu
 
     public static function getItems()
     {
-        return self::$menuRepository->getAllItems();
+        return self::$menuItemRepository->getAllItems();
     }
 }
