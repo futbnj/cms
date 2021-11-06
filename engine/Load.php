@@ -18,19 +18,22 @@ class Load
         $this->di = $di;
     }
 
+
     /**
      * @param $modelName
      * @param false $modelDir
-     * @return bool|null
+     * @param false $env
+     * @return bool
      */
-    public function model($modelName, $modelDir = false)
+    public function model($modelName, $modelDir = false, $env = false)
     {
         $modelName = ucfirst($modelName);
         $modelDir = $modelDir ? $modelDir : $modelName;
+        $env = $env ? $env : ENV;
 
         $namespaceModel = sprintf(
             self::MASK_MODEL_REPOSITORY,
-            ENV, $modelDir, $modelName
+            $env, $modelDir, $modelName
         );
 
         $isClassModel = class_exists($namespaceModel);

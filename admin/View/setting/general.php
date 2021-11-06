@@ -9,6 +9,13 @@
             </div>
             <div class="row">
                 <div class="col">
+                    <div class="setting-tabs">
+                        <?php Theme::block('setting/tabs') ?>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
                     <form id="settingForm">
                         <?php foreach ($settings as $setting): ?>
                             <div class="form-group row">
