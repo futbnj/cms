@@ -32,26 +32,33 @@
             <a class="navbar-brand" href="/admin/">Admin CMS</a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/admin/">
-                            <i class="icon-speedometer icons"></i> Home
+                    <?php foreach (\Engine\Core\Customize\Customize::getInstance()->getAdminMenuItems() as $key => $item): ?>
+                        <a class="nav-link" href="<?= $item['urlPath']?>">
+                            <i class="<?= $item['classIcon']?>">
+                                <?= $item['title']?>
+                            </i>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/pages/">
-                            <i class="icon-doc icons"></i> Pages
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/posts/">
-                            <i class="icon-pencil icons"></i> Posts
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="/admin/settings/general/">
-                            <i class="icon-equalizer icons"></i> Settings
-                        </a>
-                    </li>
+                    <? endforeach;?>
+<!--                    <li class="nav-item active">-->
+<!--                        <a class="nav-link" href="/admin/">-->
+<!--                            <i class="icon-speedometer icons"></i> Home-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/admin/pages/">-->
+<!--                            <i class="icon-doc icons"></i> Pages-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/admin/posts/">-->
+<!--                            <i class="icon-pencil icons"></i> Posts-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link" href="/admin/settings/general/">-->
+<!--                            <i class="icon-equalizer icons"></i> Settings-->
+<!--                        </a>-->
+<!--                    </li>-->
                 </ul>
             </div>
 
