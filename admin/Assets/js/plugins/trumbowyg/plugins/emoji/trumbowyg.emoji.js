@@ -1,6 +1,6 @@
 /* ===========================================================
  * trumbowyg.emoji.js v0.1
- * Emoji picker plugin for Trumbowyg
+ * Emoji picker plugins for Trumbowyg
  * http://alex-d.github.com/Trumbowyg
  * ===========================================================
  * Author : Nicolas Pion

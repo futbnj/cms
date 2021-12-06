@@ -1,6 +1,6 @@
 /* ===========================================================
  * trumbowyg.pasteimage.js v1.0
- * Basic base64 paste plugin for Trumbowyg
+ * Basic base64 paste plugins for Trumbowyg
  * http://alex-d.github.com/Trumbowyg
  * ===========================================================
  * Author : Alexandre Demode (Alex-D)

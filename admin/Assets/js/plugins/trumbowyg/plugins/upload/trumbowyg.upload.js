@@ -1,6 +1,6 @@
 /* ===========================================================
  * trumbowyg.upload.js v1.2
- * Upload plugin for Trumbowyg
+ * Upload plugins for Trumbowyg
  * http://alex-d.github.com/Trumbowyg
  * ===========================================================
  * Author : Alexandre Demode (Alex-D)

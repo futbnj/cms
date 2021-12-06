@@ -1,6 +1,6 @@
 /* ===========================================================
  * trumbowyg.table.js v1.2
- * Table plugin for Trumbowyg
+ * Table plugins for Trumbowyg
  * http://alex-d.github.com/Trumbowyg
  * ===========================================================
  * Author : Lawrence Meckan

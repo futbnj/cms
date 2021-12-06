@@ -1,6 +1,6 @@
 /*/* ===========================================================
  * trumbowyg.insertaudio.js v1.0
- * InsertAudio plugin for Trumbowyg
+ * InsertAudio plugins for Trumbowyg
  * http://alex-d.github.com/Trumbowyg
  * ===========================================================
  * Author : Adam Hess (AdamHess)

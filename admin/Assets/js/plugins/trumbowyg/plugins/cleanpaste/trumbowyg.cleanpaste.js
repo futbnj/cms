@@ -1,13 +1,13 @@
 /* ===========================================================
  * trumbowyg.cleanpaste.js v1.0
- * Font Clean paste plugin for Trumbowyg
+ * Font Clean paste plugins for Trumbowyg
  * http://alex-d.github.com/Trumbowyg
  * ===========================================================
  * Author : Eric Radin
  */
 
 /**
- * This plugin will perform a "cleaning" on any paste, in particular
+ * This plugins will perform a "cleaning" on any paste, in particular
  * it will clean pasted content of microsoft word document tags and classes.
  */
 (function ($) {

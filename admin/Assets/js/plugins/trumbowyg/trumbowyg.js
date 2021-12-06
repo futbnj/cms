@@ -144,7 +144,7 @@ jQuery.trumbowyg = {
         var t = this,
             trumbowygIconsId = 'trumbowyg-icons';
 
-        // Get the document of the element. It use to makes the plugin
+        // Get the document of the element. It use to makes the plugins
         // compatible on iframes.
         t.doc = editorElem.ownerDocument || document;
 

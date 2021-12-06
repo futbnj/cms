@@ -38,7 +38,7 @@
             // selector matches the item
             exclude: "",
             // If true, search for nested containers within an item.If you nest containers,
-            // either the original selector with which you call the plugin must only match the top containers,
+            // either the original selector with which you call the plugins must only match the top containers,
             // or you need to specify a group (see the bootstrap nav example)
             nested: true,
             // If true, the items are assumed to be arranged vertically
@@ -248,7 +248,7 @@
 
             // get item to drag
             var closestItem = $(e.target).closest(this.options.itemSelector);
-            // using the length of this item, prevents the plugin from being started if there is no handle being clicked on.
+            // using the length of this item, prevents the plugins from being started if there is no handle being clicked on.
             // this may also be helpful in instantiating multidrag.
             if (closestItem.length) {
                 this.item = closestItem;

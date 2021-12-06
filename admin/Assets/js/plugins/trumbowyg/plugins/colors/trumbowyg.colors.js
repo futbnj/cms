@@ -1,6 +1,6 @@
 /* ===========================================================
  * trumbowyg.colors.js v1.2
- * Colors picker plugin for Trumbowyg
+ * Colors picker plugins for Trumbowyg
  * http://alex-d.github.com/Trumbowyg
  * ===========================================================
  * Author : Alexandre Demode (Alex-D)
